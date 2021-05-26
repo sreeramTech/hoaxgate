@@ -14,8 +14,8 @@
 <h3>Instrunctions</h3>
 <ol>
 <li> <b> Install Python </b> </li>
-<li>git clone </li>
-<li>cd </li>
+<li>git clone https://github.com/sreeramTech/hoaxgate/tree/master </li>
+<li>cd master </li>
 <li>Install virtualenv using "pip install  virtualenv"</li>
 <li> activate environment "/fake/Scripts/activate"</li>
 <li> pip install -r requirements.txt </li>
