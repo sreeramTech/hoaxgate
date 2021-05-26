@@ -13,6 +13,8 @@ body {
 
   margin: 0px;
   padding: 0px;
+
+  width: auto;
 }
 
 input[type="text"] {
@@ -25,9 +27,12 @@ input[type="text"] {
 }
 
 img {
-  height: 203.12px;
-  width: 450.34px;
+  height: auto;
+  width: 350.34px;
   margin-top: 50px;
+  margin-left: 16px;
+  margin-left: 16px;
+  align-items: center;
 }
 
 select option {
@@ -35,7 +40,7 @@ select option {
 }
 
 button {
-  width: 20%;
+  width: 40%;
   height: 50px;
   border-style: hidden;
   border-radius: 83px;
@@ -54,6 +59,8 @@ textarea {
   padding: 16px;
   background-color: #ffc947;
   border-radius: 5px;
+  width: 75%;
+  margin: 16px;
 
   text-decoration: #0a1931;
 }
