@@ -1,0 +1,33 @@
+
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="HandheldFriendly" content="true">
+
+{% extends "bootstrap/base.html" %}
+{% block styles %}
+<link rel="stylesheet" href="{{url_for('.static',filename = 'index.css')}}">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap" rel="stylesheet">
+
+{% endblock %}
+
+{% block content%}
+<center>
+    <img src = "{{url_for('static',filename = 'owl-logo.svg')}}"/>
+    <h1>HOAX GATE</h1>
+    <div class="container-fluid"> 
+    <form action = "#" method = "post">
+        <div class="row">
+        <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+            <textarea  placeholder = "Message" name="userTextInput" rows="6" cols="50" required="required" style="font-size: 18pt"></textarea>>
+
+        </div>
+
+
+            <button type="submit" class="btn btn-block btn-danger-outline">Search</button>
+    </div>    
+        
+        </form>
+    </div>    
+</center>
+{% endblock %}

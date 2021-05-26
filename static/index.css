@@ -1,0 +1,59 @@
+body {
+  background: #141e30; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #243b55,
+    #141e30
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #243b55,
+    #141e30
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  margin: 0px;
+  padding: 0px;
+}
+
+input[type="text"] {
+  width: 70%;
+  height: 25px;
+  padding: 12px 20px;
+  margin: 8px 0;
+  border-style: hidden;
+  border-radius: 83px;
+}
+
+img {
+  height: 203.12px;
+  width: 450.34px;
+  margin-top: 50px;
+}
+
+select option {
+  color: white;
+}
+
+button {
+  width: 20%;
+  height: 50px;
+  border-style: hidden;
+  border-radius: 83px;
+  color: white;
+  background-color: #185adb;
+
+  margin-top: 32px;
+}
+
+h1 {
+  color: mintcream;
+  font-family: "Roboto";
+}
+
+textarea {
+  padding: 16px;
+  background-color: #ffc947;
+  border-radius: 5px;
+
+  text-decoration: #0a1931;
+}
