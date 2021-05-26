@@ -1,0 +1,12 @@
+{% extends "bootstrap/base.html" %}
+{% block styles %}
+<link rel="stylesheet" href="{{url_for('.static',filename = 'result.css')}}">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap" rel="stylesheet">
+{% endblock %}
+{% block content%}
+<center>
+    <p>📰 News seems to be  {{res}}</p>
+    <img src = "{{url_for('static',filename = 'found.png')}}"/>
+</center>
+{% endblock %}
