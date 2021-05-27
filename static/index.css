@@ -1,3 +1,23 @@
+@media only screen and (min-width: 400px) {
+  img {
+    height: auto;
+    width: 150.34px;
+    margin-top: 50px;
+    margin-left: 16px;
+    margin-left: 16px;
+  }
+}
+
+@media only screen and (min-width: 350px) {
+  img {
+    height: auto;
+    width: 150.34px;
+    margin-top: 50px;
+    margin-left: 16px;
+    margin-left: 16px;
+  }
+}
+
 body {
   background: #141e30; /* fallback for old browsers */
   background: -webkit-linear-gradient(

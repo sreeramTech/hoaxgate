@@ -1,4 +1,5 @@
 from flask import Flask, render_template, request, url_for, redirect
+from numpy import load
 from sklearn.model_selection import train_test_split
 from sklearn.feature_extraction.text import TfidfVectorizer
 from flask_bootstrap import Bootstrap
@@ -24,16 +25,18 @@ def fake_news_detect(news):
     input_data = [news]
     vectorized_input_data = tfvect.transform(input_data)
     prediction = loaded_model.predict(vectorized_input_data)
-    return prediction[0]
+    probability = loaded_model._predict_proba_lr(vectorized_input_data)
+    probability = int(probability[0][0]*100)
+    return prediction[0], probability
 
 
 @app.route('/', methods=["POST", "GET"])
 def index():
     if request.method == "POST":
         text = request.form['userTextInput']
-        pred = fake_news_detect(text)
+        pred, prob = fake_news_detect(text)
 
-        return render_template("result.html", res=pred)
+        return render_template("result.html", res=pred, prob=prob)
     else:
         return render_template("index.html")
 
