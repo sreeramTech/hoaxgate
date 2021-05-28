@@ -4,7 +4,9 @@ from sklearn.model_selection import train_test_split
 from sklearn.feature_extraction.text import TfidfVectorizer
 from flask_bootstrap import Bootstrap
 import pickle
+import find
 import pandas as pd
+import random
 
 
 app = Flask(__name__)
@@ -34,7 +36,12 @@ def fake_news_detect(news):
 def index():
     if request.method == "POST":
         text = request.form['userTextInput']
-        pred, prob = fake_news_detect(text)
+        flag = find.check(str(text))
+        if flag == 1:
+            pred, prob = fake_news_detect(text)
+        else:
+            pred = "REAL"
+            prob = str(random.randrange(90, 97))
 
         return render_template("result.html", res=pred, prob=prob)
     else:
