@@ -12,6 +12,8 @@ def punctuation_removal(text):
 
 def check(key):
     location = data['text'].loc[data['text'] == key].index.values
+    fake = data['label'].loc[data['label'] == 'FAKE'].index.values
+    print(fake)
     print(location)
     if len(location) == 0:
         print("executed")
